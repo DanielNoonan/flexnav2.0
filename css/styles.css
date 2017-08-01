@@ -454,7 +454,7 @@ Using the Adjancent Sibling Combinator selector '+' */
 .scroller {
     width: 20px;
     height: 5000px;
-    background-color: aliceblue;
+    background-color: aquamarine;
 }
 
 
@@ -466,16 +466,37 @@ Using the Adjancent Sibling Combinator selector '+' */
 
 /*****************/
 
-* {
-    -webkit-box-sizing: border-box;
+html {
     box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     font-family: 'Garamond', serif;
+    color: peru;
+    @mixin atLarge {
+        color: $testVariable;
+    }
 }
 
 img {
     max-width: 100%;
     height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
 }
